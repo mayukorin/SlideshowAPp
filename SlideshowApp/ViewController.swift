@@ -99,7 +99,7 @@ class ViewController: UIViewController {
         if  (number < imageArray.count-1 && number != -1) {
             number += 1//ひとつ先にする
             DisplayImage()//表示
-            print("OK")
+            
             
             
         } else {//画像が配列の最後、またはnumberが初期値(-1)だったら
