@@ -33,8 +33,23 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         number = -1 //初期値を設定
         
+        let tapGesture:UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(ViewController.tapped(_:)))//イベントが入ったUITapGestureRecognizerをインスタンス化
         
         
+        self.image1.isUserInteractionEnabled = true//imageviewがタップを検知できるように
+        
+        
+        
+        self.image1.addGestureRecognizer(tapGesture)//imageviewにイベントを追加
+        
+    }
+    
+    @objc func tapped(_ sender: UITapGestureRecognizer){
+        if sender.state == .ended {
+            print("タップ")
+        }
     }
     
     @IBAction func returnaction(_ sender: Any) {
@@ -58,6 +73,7 @@ class ViewController: UIViewController {
         if  (number < imageArray.count-1 && number != -1) {
             number += 1//ひとつ先にする
             DisplayImage()//表示
+            print("OK")
             
             
         } else {//画像が配列の最後、またはnumberが初期値(-1)だったら
