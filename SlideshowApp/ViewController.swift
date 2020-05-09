@@ -17,7 +17,8 @@ class ViewController: UIViewController {
     
     var number = 0//写真を識別するためのもの
     var timer:Timer!//タイマー
-    var flag=0//スライドショー再開フラグ
+    var flag = 0//スライドショー再開フラグ
+    var flag2 = 0//最初の状態か判断する
     
     let imageArray = ["sea3.jpg","sea6.JPG","sea4.JPG","sea7.JPG"]//写真の配列
     
@@ -32,7 +33,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        number = -1 //初期値を設定
+        
         
         let tapGesture:UITapGestureRecognizer = UITapGestureRecognizer(
             target: self,
@@ -41,9 +42,9 @@ class ViewController: UIViewController {
         
         self.image1.isUserInteractionEnabled = true//imageviewがタップを検知できるように
         
-        
-        
         self.image1.addGestureRecognizer(tapGesture)//imageviewにイベントを追加
+        
+        DisplayImage()//最初の画像を表示させる
         
     }
     
@@ -82,7 +83,7 @@ class ViewController: UIViewController {
         
         if self.timer == nil {//スライドショーをやっていなければ
         
-        if number >= 1 && number <= imageArray.count-1 && number != -1{
+        if number >= 1 && number <= imageArray.count-1 {
             number -= 1//ひとつ前にして
             DisplayImage()//表示
         } else {//もし、画像が最初のもの、または初期値(-1)だったら
@@ -96,13 +97,17 @@ class ViewController: UIViewController {
         
         if self.timer == nil {//スライドショーをやっていなれば
         
-        if  (number < imageArray.count-1 && number != -1) {
+        if  (number < imageArray.count-1 && flag2 != 0) {
             number += 1//ひとつ先にする
             DisplayImage()//表示
             
             
             
-        } else {//画像が配列の最後、またはnumberが初期値(-1)だったら
+        } else if flag2==0 {//最初の状態で進むをタップしたら
+            DisplayImage()//最初の画像を表示
+            flag2 = 1//初期フラッグを1にする
+            
+        } else  {//画像が配列の最後だったら
                 number = 0
                 DisplayImage()
             }
@@ -113,7 +118,7 @@ class ViewController: UIViewController {
     @objc func updateTimer(_timer: Timer) {
     
         
-        if (number < imageArray.count-1 && number != -1) {
+        if (number < imageArray.count-1 ) {
             number += 1//ひとつ先にする
             DisplayImage()//表示
         } else {
