@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     
     var number = 0//写真を識別するためのもの
     var timer:Timer!//タイマー
+    var flag=0//スライドショー再開フラグ
     
     let imageArray = ["sea3.jpg","sea6.JPG","sea4.JPG","sea7.JPG"]//写真の配列
     
@@ -47,7 +48,14 @@ class ViewController: UIViewController {
     }
     
     @objc func tapped(_ sender: UITapGestureRecognizer){
+        if timer != nil {//もしタイマーが動いていれば、（スライドショーが進んでいたら）、止める
+            self.timer.invalidate()
+            self.timer = nil
+            flag = 1//スライドショー再開フラグを1にする
+            
+        }
         self.performSegue(withIdentifier:"mySegue" , sender: nil)//次の画面に遷移できるように準備
+        
         
     }
     
@@ -62,7 +70,11 @@ class ViewController: UIViewController {
         }
     }
     @IBAction func unwind(_ segue:UIStoryboardSegue) {//拡大画面から戻ってきた時
+        if (flag == 1) {//拡大画面遷移前に、元々スライドショーをやっていれば、スライドショーを再開する
         
+            self.timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(updateTimer(_timer:)), userInfo: nil, repeats: true)
+            flag = 0//flagを0にする
+        }
     }
     
     
@@ -112,7 +124,7 @@ class ViewController: UIViewController {
     
     
     
-    @IBAction func slide(_ sender: Any) {//再生と停止ボタン
+    @IBAction func slide(_ sender: Any) {//再生と停止ボタンを押すと、
         
         if self.timer == nil {//スライドショーが動いていなかったら、動かす
             self.timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(updateTimer(_timer:)), userInfo: nil, repeats: true)
