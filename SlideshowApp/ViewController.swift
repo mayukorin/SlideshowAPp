@@ -137,11 +137,13 @@ class ViewController: UIViewController {
             self.timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(updateTimer(_timer:)), userInfo: nil, repeats: true)
             rreturn.isEnabled = false//スライドショー中は戻るボタンを押せないように
             forward.isEnabled = false//スライドショー中は進むボタンを押せないように
+            playback.setTitle("停止", for: .normal)//停止とボタンを表示させる
         } else {//スライドショーが動いていたら、止める
             self.timer.invalidate()
             self.timer = nil
             rreturn.isEnabled = true//スライドショーが終わったらボタンを押せるように
             forward.isEnabled = true
+            playback.setTitle("再生", for: .normal)//再生とボタンを表示させる
         }
     }
     
