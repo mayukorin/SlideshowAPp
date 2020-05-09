@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     var flag = 0//スライドショー再開フラグ
     var flag2 = 0//最初の状態か判断する
     
-    let imageArray = ["sea3.jpg","sea6.JPG","sea4.JPG","sea7.JPG"]//写真の配列
+    let imageArray = ["sea3.jpg","sea6.jpg","sea4.jpg","sea7.jpg"]//写真の配列
     
     func DisplayImage() {//その時のnumber+1番目の画像をimageviewで表示させる
         let namee = imageArray[number]//表示させたい写真の名前
