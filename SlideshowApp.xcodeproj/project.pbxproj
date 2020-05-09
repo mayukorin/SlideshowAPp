@@ -15,9 +15,9 @@
 		6E70B6B4246581FA0094FDA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E70B6B2246581FA0094FDA3 /* LaunchScreen.storyboard */; };
 		6E70B6BC246582550094FDA3 /* ExpansionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E70B6BB246582550094FDA3 /* ExpansionViewController.swift */; };
 		6E70B6DC24659D090094FDA3 /* sea3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E70B6DB24659D090094FDA3 /* sea3.jpg */; };
-		6E70B6FA2466A0E00094FDA3 /* sea6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E70B6F72466A0E00094FDA3 /* sea6.jpg */; };
-		6E70B6FB2466A0E00094FDA3 /* sea4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E70B6F82466A0E00094FDA3 /* sea4.jpg */; };
-		6E70B6FC2466A0E00094FDA3 /* sea7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E70B6F92466A0E00094FDA3 /* sea7.jpg */; };
+		6E70B7002466A9DF0094FDA3 /* sea7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E70B6FD2466A9DE0094FDA3 /* sea7.jpg */; };
+		6E70B7012466A9DF0094FDA3 /* sea4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E70B6FE2466A9DF0094FDA3 /* sea4.jpg */; };
+		6E70B7022466A9DF0094FDA3 /* sea6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E70B6FF2466A9DF0094FDA3 /* sea6.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +31,9 @@
 		6E70B6B5246581FA0094FDA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E70B6BB246582550094FDA3 /* ExpansionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionViewController.swift; sourceTree = "<group>"; };
 		6E70B6DB24659D090094FDA3 /* sea3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sea3.jpg; sourceTree = "<group>"; };
-		6E70B6F72466A0E00094FDA3 /* sea6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sea6.jpg; path = ../../../Downloads/sea6.jpg; sourceTree = "<group>"; };
-		6E70B6F82466A0E00094FDA3 /* sea4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sea4.jpg; path = ../../../Downloads/sea4.jpg; sourceTree = "<group>"; };
-		6E70B6F92466A0E00094FDA3 /* sea7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sea7.jpg; path = ../../../Downloads/sea7.jpg; sourceTree = "<group>"; };
+		6E70B6FD2466A9DE0094FDA3 /* sea7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sea7.jpg; sourceTree = "<group>"; };
+		6E70B6FE2466A9DF0094FDA3 /* sea4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sea4.jpg; sourceTree = "<group>"; };
+		6E70B6FF2466A9DF0094FDA3 /* sea6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sea6.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,9 +69,9 @@
 				6E70B6A7246581F60094FDA3 /* AppDelegate.swift */,
 				6E70B6A9246581F60094FDA3 /* SceneDelegate.swift */,
 				6E70B6DB24659D090094FDA3 /* sea3.jpg */,
-				6E70B6F82466A0E00094FDA3 /* sea4.jpg */,
-				6E70B6F72466A0E00094FDA3 /* sea6.jpg */,
-				6E70B6F92466A0E00094FDA3 /* sea7.jpg */,
+				6E70B6FE2466A9DF0094FDA3 /* sea4.jpg */,
+				6E70B6FF2466A9DF0094FDA3 /* sea6.jpg */,
+				6E70B6FD2466A9DE0094FDA3 /* sea7.jpg */,
 				6E70B6AB246581F60094FDA3 /* ViewController.swift */,
 				6E70B6BB246582550094FDA3 /* ExpansionViewController.swift */,
 				6E70B6AD246581F70094FDA3 /* Main.storyboard */,
@@ -140,12 +140,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E70B7022466A9DF0094FDA3 /* sea6.jpg in Resources */,
 				6E70B6B4246581FA0094FDA3 /* LaunchScreen.storyboard in Resources */,
-				6E70B6FA2466A0E00094FDA3 /* sea6.jpg in Resources */,
+				6E70B7002466A9DF0094FDA3 /* sea7.jpg in Resources */,
 				6E70B6B1246581FA0094FDA3 /* Assets.xcassets in Resources */,
 				6E70B6AF246581F70094FDA3 /* Main.storyboard in Resources */,
-				6E70B6FC2466A0E00094FDA3 /* sea7.jpg in Resources */,
-				6E70B6FB2466A0E00094FDA3 /* sea4.jpg in Resources */,
+				6E70B7012466A9DF0094FDA3 /* sea4.jpg in Resources */,
 				6E70B6DC24659D090094FDA3 /* sea3.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
