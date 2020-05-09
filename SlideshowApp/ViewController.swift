@@ -75,6 +75,8 @@ class ViewController: UIViewController {
         
             self.timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(updateTimer(_timer:)), userInfo: nil, repeats: true)
             flag = 0//flagを0にする
+            rreturn.isEnabled = false//戻る進むボタンを押せないように
+            forward.isEnabled = false
         }
     }
     
@@ -133,9 +135,13 @@ class ViewController: UIViewController {
         
         if self.timer == nil {//スライドショーが動いていなかったら、動かす
             self.timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(updateTimer(_timer:)), userInfo: nil, repeats: true)
+            rreturn.isEnabled = false//スライドショー中は戻るボタンを押せないように
+            forward.isEnabled = false//スライドショー中は進むボタンを押せないように
         } else {//スライドショーが動いていたら、止める
             self.timer.invalidate()
             self.timer = nil
+            rreturn.isEnabled = true//スライドショーが終わったらボタンを押せるように
+            forward.isEnabled = true
         }
     }
     
