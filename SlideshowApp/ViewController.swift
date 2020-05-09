@@ -55,10 +55,11 @@ class ViewController: UIViewController {
         if segue.identifier == "mySegue" {
             let expansionViewController:ExpansionViewController = segue.destination as! ExpansionViewController
             
+            let namee = imageArray[number]//表示させたい写真の名前
             
+            expansionViewController.namee2 = namee//写真の名前を送る
             
         }
-        <#code#>
     }
     @IBAction func unwind(_ segue:UIStoryboardSegue) {//拡大画面から戻ってきた時
         
@@ -114,7 +115,7 @@ class ViewController: UIViewController {
     @IBAction func slide(_ sender: Any) {//再生と停止ボタン
         
         if self.timer == nil {//スライドショーが動いていなかったら、動かす
-            self.timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(updateTimer(_timer:)), userInfo: nil, repeats: true)
+            self.timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(updateTimer(_timer:)), userInfo: nil, repeats: true)
         } else {//スライドショーが動いていたら、止める
             self.timer.invalidate()
             self.timer = nil

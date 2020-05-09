@@ -9,11 +9,18 @@
 import UIKit
 
 class ExpansionViewController: UIViewController {
-
+    @IBOutlet weak var image2: UIImageView!
+    
+    var namee2:String=""
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        let image = UIImage(named:namee2)
+        image2.image = image
     }
     
 
