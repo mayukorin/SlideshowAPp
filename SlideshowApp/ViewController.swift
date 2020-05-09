@@ -47,10 +47,23 @@ class ViewController: UIViewController {
     }
     
     @objc func tapped(_ sender: UITapGestureRecognizer){
-        if sender.state == .ended {
-            print("タップ")
-        }
+        self.performSegue(withIdentifier:"mySegue" , sender: nil)//次の画面に遷移できるように準備
+        
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {//拡大画面遷移の時に行いたい処理
+        if segue.identifier == "mySegue" {
+            let expansionViewController:ExpansionViewController = segue.destination as! ExpansionViewController
+            
+            
+            
+        }
+        <#code#>
+    }
+    @IBAction func unwind(_ segue:UIStoryboardSegue) {//拡大画面から戻ってきた時
+        
+    }
+    
     
     @IBAction func returnaction(_ sender: Any) {
         
